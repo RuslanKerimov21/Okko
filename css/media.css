@@ -1,0 +1,388 @@
+@media(max-width: 1700px){
+    .widget-serial .widget{
+        flex: 0 0 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 12px;
+    }
+    .widget-serial .widget:nth-child(2){
+        display: block;
+    }
+    .widget-banner{
+        margin-top: auto;
+    }
+    .oval {
+        margin-top: 0;
+    }
+    .music-name{
+        font-size: 16px;
+    }
+    .music-img{
+        width: 89px;
+    }
+    .music-img img{
+        width: 100%;
+    }
+    .fullscreen{
+        overflow: auto;
+    }
+    .widget-serial{
+        width: 100%;
+    }
+}
+@media(max-width: 1631px){
+    .widget-serial, .bottom-widget{
+        display: none;
+    }
+}
+@media(max-width: 1200px){
+    .game-modal .modal-content{
+        position: fixed;
+        top: 83px;
+        height: 82%;
+        overflow: auto;
+        padding: 0 10px;
+    }
+    .content-1{
+        flex-direction: column;
+    }
+    .content-3{
+        top: 50% !important;
+        width: fit-content !important;
+        margin: 0 auto;
+    }
+    .content-3.active{
+        display: block;
+    }
+    .game-card{
+        margin: 0;
+        margin-right: 12px;
+        flex: 0 0 306px;
+        width: 306px;
+        height: 310px;
+        white-space: nowrap;
+    }
+    .game-card__items{
+        overflow-x: auto;
+        margin-left: 0;
+        margin-top: 50px;
+        white-space: nowrap;
+    }
+}
+@media(max-width: 1070px){
+    .swiper .widget-group__btn {
+        width: 94%;
+    }
+    .about .modal-content{
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        overflow: auto;
+        height: 83%;
+    }
+    .okko-ico{
+        width: 96px;
+        height: 121px;
+    }
+    .okko-ico img{
+        width: 100%;
+    }
+    .oval {
+        height: fit-content;
+        width: fit-content;
+    }
+    .text-xl__serial-widget{
+        font-size: 20px !important;
+    }
+    .serial-game__descr, .video{
+       width: 100%;
+    }
+    .video{
+        height: 147px;
+    }
+    .videoplayer-triger{
+        width: 45px;
+        height: 45px;
+    }
+    .videoplayer-triger img {
+        width: 11px;
+    }
+    .about .serial-game__descr{
+        height: 54%;
+        overflow: auto;
+    }
+    .widget-about__serial{
+        width: 95%;
+        right: 0;
+        left: 0;
+        margin: 0 8px;
+    }
+    .modal-content{
+        width: 100%;
+    }
+    .modal-content__title{
+        width: 167px;
+        top: -10px;
+    }
+    .more .modal-content{
+        align-items: flex-start;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .right-widget{
+        height: 300px;
+    }
+    .widget-serial{
+        display: flex;
+        overflow-x: auto;
+        max-height: fit-content;
+    }
+    .player{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 0;
+        height: 68px;
+        z-index: 1;
+    }
+    .serial{
+        flex-wrap: wrap;
+        width: 100%;
+        height: fit-content;
+    }
+    .serial-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 0;
+    }
+    .serial-item{
+        width: 100%;
+        height: 230px;
+        margin-bottom: 12px;
+    }
+    .music-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 20px;
+        width: 100%;
+    }
+    .music-info{
+        margin-bottom: 0;
+    }
+    .bottom-widget{
+        width: 100%;
+        position: relative;
+        align-items: center;
+        left: 0;
+        bottom: 0;
+        padding: 14px;
+
+    }
+    .serial-game__text{
+        font-size: 18px;
+    }
+    .serial-game__title {
+        width: 320px;
+    }
+    .serial-game__title img{
+        width: 100%;
+    }
+    .bottom-widget .button{
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    .text-xl{
+        font-size: 24px;
+    }
+    .serial-info{
+        bottom: 0;
+        padding: 13px;
+    }
+    .films-banner__info{
+        width: 220px;
+    }
+    .films-banner__info img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .widget-serial{
+        display: none;
+    }
+    .db{
+        display: flex;
+        margin: 35px 0;
+    }
+    .logo{
+        width: 88px;
+    }
+     
+    .time-list{
+        width: 205px;
+    }
+
+    .player-icon{
+        display: none;
+    }
+    .music-img{
+        width: 50px;
+        height: 49px;
+    }
+    .time-list span{
+        font-size: 28px;
+    }
+    .modal-content__banner{
+        width: 100%;
+    }
+    .game-modal .serial-game__text {
+        margin-top: 26px;
+    }
+    .game-card__button{
+        width: 40px;
+        height: 40px;
+        bottom: 0;
+        top: 15px;
+        right: 15px;
+        margin-right: 0;
+    }
+    .game-card__button svg{
+        width: 15px;
+        height: 15px;
+    }
+    .game-card__info{
+        top: unset;
+        bottom: 16px;
+    }
+    .game-card__name{
+        font-size: 24px;
+    }
+    .game-card .serial-game__descr{
+        margin-top: 12px;
+        width: 0px !important;
+    }
+}
+@media(max-width: 980px){
+    .swiper .widget-group__btn{
+        width: 92%;
+    }
+    .bottom-widget{
+        display: flex;
+    }
+    .footer{
+        border: none;
+    }
+    .footer-inner{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-wrap{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+    .footer-wrap:last-child{
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+    .footer-wrap__list{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .develop-text {
+        max-width: 181px;
+    }
+    .design-develop {
+        order: 3;
+    }
+    .copyr{
+        margin-bottom: 26px;
+    }
+    .user-agreement{
+        margin-bottom: 8px;
+    }
+    .help-list li span{
+        font-size: 18px;
+    }
+    .game-card__items{
+        margin-top: 36px;
+    }
+    .game-modal .serial-game__descr {
+        width: fit-content;
+    }
+    .button-play{
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 24px;
+        margin: 0 10px;
+    }
+    .help-list li p{
+        width: 78%;
+    }
+    .game-button__group{
+        flex-direction: column;
+        width: 100%;
+    }
+    .game-button__group .button{
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .content-3{
+        width: 100% !important;
+    }
+    .game-button__result{
+        flex-direction: column;
+        margin-top: 8px;
+    }
+    .game-button__result .button{
+        width: 100% !important;
+        margin-bottom: 8px;
+    }
+    .content-4, .content-5{
+        top: unset !important;
+        bottom: 24px !important;
+        height: unset !important;
+    }
+    .content-6{
+        top: unset !important;
+        height: unset !important;
+        bottom: 83px !important;
+    }
+    .content-6 .widget{
+        margin-top: 64px;
+    }
+    .share-results {
+        margin-bottom: 82px;
+    }
+    .serial-game__title {
+        width: 285px;
+    }
+    .player-control:hover svg{
+        opacity: 1;
+    }
+    .game-card{
+        height: 276px;
+    }
+}
+@media(max-width: 458px){
+    .oval{
+        width: 110%;
+        height: 196px;
+    }
+    .oval img{
+        height: fit-content;
+    }
+}

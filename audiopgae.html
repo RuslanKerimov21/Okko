@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML 5 Audio play with custom control</title>
+	<link rel="stylesheet" href="css/musicplayer.css">
+</head>
+<body>
+	<div class="fullscreen fullscreen-player d-flex a-center j-center player-banner">
+		<div class="logo">
+			<img src="img/icon/1703_metal 3.svg" alt="logo">
+		</div>
+		<div class="player-container">
+			<audio src="https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3"
+				id="audio"></audio>
+			<div class="player_image dflex a-center j-center">
+				<div class="player-msg d-flex fl-direction a-center j-center active">
+					<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M5.56866 13.1973C5.56866 13.5049 5.70929 13.751 5.94659 13.874V14.9639C5.50714 15.1924 5.26984 15.6846 5.31378 16.291C5.45441 17.3633 6.23663 19.1738 7.16827 20.6416C8.46027 22.7773 9.2337 23.5332 10.0775 23.5332C11.2112 23.5332 11.7474 22.4785 11.1146 21.3623L7.84503 15.5703C7.59894 15.1396 7.24738 14.9023 6.80792 14.8496V13.8125C6.9837 13.6895 7.08917 13.4697 7.08917 13.1973C7.12433 8.52148 9.95441 5.52441 14.4984 5.52441C19.0423 5.52441 21.8636 8.52148 21.8987 13.1973C21.8987 13.4697 22.0042 13.6895 22.1888 13.8125V14.8496C21.7493 14.9023 21.389 15.1396 21.1517 15.5703L17.8734 21.3623C17.2405 22.4785 17.7855 23.5332 18.9105 23.5332C19.7542 23.5332 20.5276 22.7773 21.8196 20.6416C22.7513 19.1738 23.5335 17.3633 23.6741 16.291C23.7181 15.6846 23.4808 15.1924 23.0413 14.9639V13.874C23.2786 13.751 23.4193 13.5049 23.4193 13.1973C23.4193 7.73047 20.0179 3.99512 14.4984 3.99512C8.97003 3.99512 5.56866 7.73047 5.56866 13.1973ZM9.34796 8.71484C10.7718 7.93262 12.4681 7.5459 14.4984 7.55469C16.5198 7.5459 18.2161 7.93262 19.64 8.71484C18.5062 7.20312 16.8275 6.4209 14.4984 6.4209C12.1605 6.4209 10.4818 7.20312 9.34796 8.71484ZM16.1946 21.7314C16.555 21.9336 16.889 21.8457 17.0823 21.5029L20.7034 15.1133C20.8968 14.7881 20.8089 14.4453 20.4485 14.2432C19.8509 13.9004 19.139 14.1377 18.7523 14.8057L15.8167 19.9912C15.4388 20.6504 15.6058 21.3975 16.1946 21.7314ZM12.7933 21.7314C13.3821 21.3975 13.5491 20.6504 13.1712 19.9912L10.2357 14.8057C9.85773 14.1377 9.14581 13.9004 8.54816 14.2432C8.17902 14.4453 8.09991 14.7881 8.28449 15.1133L11.9056 21.5029C12.0989 21.8457 12.4329 21.9336 12.7933 21.7314Z"
+							fill="#B0B7C0" fill-opacity="0.8" />
+					</svg>
+					<span>
+						Рекомендуем надеть наушники
+					</span>
+				</div>
+				<img src="" id="trackImage">
+			</div>
+			<div class="player-control d-flex a-center">
+				<div class="player_title">
+					<div id="trackTitle">Title</div>
+				</div>
+				<div class="player_volume d-flex a-center">
+					<button type="button" class="plyr__control plyr__control--pressed" data-plyr="mute">
+						<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12.6096 1.84591C12.5115 1.06128 11.5846 0.695504 10.9771 1.20172L5.95804 5.38431C5.86818 5.45919 5.75492 5.5002 5.63795 5.5002H1.75C1.05964 5.5002 0.5 6.05984 0.5 6.7502V11.2502C0.5 11.9406 1.05964 12.5002 1.75 12.5002H5.63795C5.75492 12.5002 5.86818 12.5412 5.95804 12.6161L10.9771 16.7987C11.5846 17.3049 12.5115 16.9391 12.6096 16.1545L12.7054 15.388C12.7054 11 12.7054 7 12.7054 2.61241L12.6096 1.84591Z"
+								fill="#D5DAE1" />
+							<path
+								d="M17.9082 2.94597C18.3014 2.8159 18.7257 3.02926 18.8557 3.42253C19.4362 5.17749 19.75 7.05295 19.75 9.00021C19.75 10.9475 19.4362 12.8229 18.8557 14.5779C18.7257 14.9711 18.3014 15.1845 17.9082 15.0544C17.5149 14.9244 17.3015 14.5001 17.4316 14.1069C17.9624 12.5019 18.25 10.7854 18.25 9.00021C18.25 7.215 17.9624 5.49847 17.4316 3.89354C17.3015 3.50028 17.5149 3.07603 17.9082 2.94597Z"
+								fill="#D5DAE1" />
+							<path
+								d="M16.0323 4.9479C15.8894 4.5591 15.4584 4.35972 15.0696 4.50257C14.6808 4.64542 14.4815 5.07641 14.6243 5.46521C15.0288 6.56615 15.25 7.7565 15.25 9.0002C15.25 10.0318 15.0978 11.0265 14.8152 11.9639C14.7995 12.0161 14.7833 12.0681 14.7668 12.12C14.7222 12.2597 14.6747 12.3981 14.6243 12.5352C14.4815 12.924 14.6808 13.355 15.0696 13.4978C15.4584 13.6407 15.8894 13.4413 16.0323 13.0525C16.0901 12.8952 16.1446 12.7364 16.1958 12.5761C16.2148 12.5165 16.2333 12.4568 16.2514 12.3969C16.5758 11.3206 16.75 10.1801 16.75 9.0002C16.75 7.57741 16.4968 6.21207 16.0323 4.9479Z"
+								fill="#D5DAE1" />
+						</svg>
+						<span class="label--pressed plyr__sr-only">Mute</span>
+						<span class="label--not-pressed plyr__sr-only">Unmute</span>
+					</button>
+					<div class="volume">
+						<input class="custom custom-2" type="range" min="0" max="1" step="0.1" id="volume"
+							onchange="ChangeVolume()">
+					</div>
+				</div>
+			</div>
+			<div class="player_timeline">
+				<input class="custom" type="range" step="any" id="seekbar" onchange="ChangeTheTime()" value="0">
+			</div>
+			<div class="player_times d-flex j-between">
+				<label id="lblTime">00:00</label>
+				<label id="lblDuration">--:--</label>
+			</div>
+			<div class="player_controls d-flex a-center j-between">
+				<p id="prev">
+					<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M2.13281 6.49619C1.46615 6.88109 1.46615 7.84334 2.13281 8.22824L9.49645 12.4796C10.1631 12.8645 10.9964 12.3834 10.9964 11.6136L10.9964 3.11082C10.9964 2.34102 10.1631 1.85989 9.49645 2.24479L2.13281 6.49619Z"
+							fill="#D5DAE1"></path>
+						<path
+							d="M8.67969 6.49619C8.01302 6.88109 8.01302 7.84334 8.67969 8.22824L16.0433 12.4796C16.71 12.8645 17.5433 12.3834 17.5433 11.6136L17.5433 3.11082C17.5433 2.34102 16.71 1.85989 16.0433 2.24479L8.67969 6.49619Z"
+							fill="#D5DAE1"></path>
+					</svg>
+				</p>
+				<p id="play">
+					<img class="play-audio__img" src="img/icon/play.svg" alt="play">
+				</p>
+				<p id="next">
+					<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M18.8672 6.49619C19.5339 6.88109 19.5339 7.84334 18.8672 8.22824L11.5036 12.4796C10.8369 12.8645 10.0036 12.3834 10.0036 11.6136L10.0036 3.11082C10.0036 2.34102 10.8369 1.85989 11.5036 2.24479L18.8672 6.49619Z"
+							fill="#D5DAE1"></path>
+						<path
+							d="M12.3203 6.49619C12.987 6.88109 12.987 7.84334 12.3203 8.22824L4.95668 12.4796C4.29001 12.8645 3.45668 12.3834 3.45668 11.6136L3.45668 3.11082C3.45668 2.34102 4.29001 1.85989 4.95668 2.24479L12.3203 6.49619Z"
+							fill="#D5DAE1"></path>
+					</svg>
+				</p>
+			</div>
+		</div>
+		<div class="widget widget-player d-flex a-center j-center fl-direction">
+			<div class="okko-ico">
+				<img src="img/icon/okko.svg" alt="icon">
+			</div>
+			<div class="text-xl__serial-widget text-xl">
+				смотреть в&nbsp;okko
+			</div>
+			<div class="text-s">
+				Смотрите 1703 с&nbsp;29&nbsp;сентября
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var listAudio = [];
+		var listImages = [];
+		var listTitles = [];
+		listAudio[0] = 'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3';
+		listAudio[1] = 'https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/BackgroundMusica2.mp3';
+		listImages[0] = 'https://avatars.mds.yandex.net/i?id=29a27073cbdb826c1ba46daf900bfb66_sr-4012376-images-thumbs&n=13';
+		listImages[1] = 'https://avatars.mds.yandex.net/i?id=2a00000179f91b60f98aadbe4291414e9e33-3966189-images-thumbs&n=13';
+		listTitles[0] = 'track1';
+		listTitles[1] = 'track2';
+		var track = 0;
+		var track_count = listAudio.length - 1;
+		// get the audio, volume and seekbar elements
+		var audio = document.getElementById("audio");
+		var volumeRange = document.getElementById('volume');
+		var seekbar = document.getElementById('seekbar');
+		var duration = document.getElementById('lblDuration');
+		var play = document.getElementById('play');
+		let playImgAudi = document.querySelector('.play-audio__img');
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		var musicTitle = document.getElementById('trackTitle');
+		var musicImage = document.getElementById('trackImage');
+		window.onload = function () {
+			switchTreck(0);
+			audio.addEventListener('timeupdate', UpdateTheTime, false);
+			audio.addEventListener('durationchange', SetSeekBar, false);
+			volumeRange.value = audio.volume;
+			duration.innerHTML = getTimeCodeFromNum();
+		}
+		play.addEventListener("click", () => {
+			PlayPause();
+		});
+		prev.addEventListener("click", function () {
+			if (track > 0) {
+				track--;
+			} else {
+				track = track_count;
+			}
+			switchTreck(track);
+		});
+		next.addEventListener("click", function () {
+			if (track < track_count) {
+				track++;
+				// playImgAudi.src = '/img/icon/play.svg'
+			} else {
+				track = 0;
+			}
+			switchTreck(track);
+		});
+		audio.addEventListener("ended", function () {
+			if (track < track_count) {
+				track++;
+			} else {
+				track = 0;
+			}
+			switchTreck(track);
+		});
+		function ChangeVolume() {
+			var myVol = volumeRange.value;
+			audio.volume = myVol;
+			if (myVol == 0) {
+				audio.muted = true;
+			} else {
+				audio.muted = false;
+			}
+		}
+		function SetSeekBar() {
+			seekbar.min = 0;
+			seekbar.max = audio.duration;
+		}
+		function ChangeTheTime() {
+			audio.currentTime = seekbar.value;
+		}
+		const times  = seekbar.max = audio.duration;
+		console.log(times)
+		function UpdateTheTime() {
+			var sec = audio.currentTime;
+			var h = Math.floor(sec / 3600);
+			sec = sec % 3600;
+			var min = Math.floor(sec / 60);
+			sec = Math.floor(sec % 60);
+			if (sec.toString().length < 2) sec = "0" + sec;
+			if (min.toString().length < 2) min = "0" + min;
+			document.getElementById('lblTime').innerHTML = h + ":" + min + ":" + sec;
+			seekbar.min = audio.startTime;
+			seekbar.max = audio.duration;
+			seekbar.value = audio.currentTime;
+			seekbar.style.backgroundSize = seekbar.value + '% 100%';
+		}
+		function PlayPause() {
+			if (audio.paused) {
+				audio.play();
+				playImgAudi.src = '/img/icon/pause.fill.svg'
+			} else {
+				audio.pause();
+				playImgAudi.src = '/img/icon/play.svg'
+			}
+		}
+		function MuteNow() {
+			if (audio.muted) {
+				audio.muted = false;
+				volumeRange.value = audio.volume;
+			}
+			else {
+				audio.muted = true;
+				volumeRange.value = 0;
+			}
+		}
+		function getTimeCodeFromNum() {
+			num = audio.duration;
+			let seconds = parseInt(num);
+			let minutes = parseInt(seconds / 60);
+			seconds -= minutes * 60;
+			const hours = parseInt(minutes / 60);
+			minutes -= hours * 60;
+
+			if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+			return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+		}
+		function switchTreck(numTreck) {
+			musicTitle.innerHTML = listTitles[numTreck];
+			musicImage.src = listImages[numTreck];
+			audio.src = listAudio[numTreck];
+			audio.currentTime = 0;
+			//переключалка значка плей-стоп
+			// imgPlay[0].src = "./img/icon/pause.fill.svg";
+			audio.play();
+		}
+		// Функция вызова сообщения
+		setTimeout(function () {
+			document.querySelector('.player-msg').classList.remove('active');
+		}, 3000);
+	</script>
+</body>
+</html>

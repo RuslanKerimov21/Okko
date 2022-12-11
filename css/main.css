@@ -1,0 +1,504 @@
+@import "/css/theme.css" all;
+@import "/css/modal.css" all;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oswald:wght@600&display=swap');
+/* Стандартные стили для сайта начало */
+a {
+	display: block;
+	text-decoration: none;
+	color: #3C3C3C;
+	position: relative;
+	font-size: 16px;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background: #000000;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	color: #D5DAE1;
+}
+/* Стандартные стили для сайта конец */
+.logo {
+	position: fixed;
+	top: 24px;
+	left: 24px;
+	z-index: 3;
+}
+.logo img {
+	width: 100%;
+}
+.right-widget {
+	position: fixed;
+	right: 24px;
+	top: 24px;
+	bottom: 24px;
+	width: 288px;
+}
+/* Стили для музыкального плеера */
+.player {
+	height: 108px;
+}
+.music-img__wrap {
+	position: relative;
+}
+.player-icon {
+	left: 8px;
+	bottom: 8px;
+	position: absolute;
+}
+.music-content {
+	margin-left: auto;
+	margin-right: 14px;
+}
+.music-info{
+	width: 150px;
+	overflow: hidden;
+	height: 40px;
+	margin-bottom: 14px;
+}
+.music-author__name {
+	font-size: 14px;
+	color: rgba(176, 183, 192, 0.8);
+	font-family: 'Inter', sans-serif;
+}
+.music-name {
+	font-size: 20px;
+	color: #D5DAE1;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+.button-play .button {
+	padding: 26px 16px;
+}
+.player-control:hover svg{
+	opacity: 0.5;
+}
+.play-music{
+	width: 28px;
+	height: 28px;
+	border-radius: 100%;
+	background: #D5DAE1;
+}
+.player-control img{
+	width: 9px;
+	height: 9px;
+}
+/* Стили для музыкального плеера */
+/* Стили для виджетов  */
+.widget-serial {
+	width: 288px;
+	overflow: auto;
+	max-height: 34.9vw;
+}
+.widget-serial::-webkit-scrollbar {
+	width: 0;
+}
+.widget {
+	background: #000;
+	border: 1px solid rgb(176 183 192 / 24%);
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 12px;
+}
+.widget .text-s a,
+.widget .text-s {
+	margin-top: 24px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	color: rgba(176, 183, 192, 0.8);
+}
+.widget-banner {
+	position: relative;
+}
+.widget-info {
+	text-align: center;
+}
+.widget-img {
+	overflow: hidden;
+}
+.widget-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.oval {
+	margin-top: 21px;
+	width: 110%;
+	height: 210px;
+}
+.circle {
+	clip-path: circle(38.2% at 50% 50%);
+	width: 174px;
+	height: 174px;
+	background: radial-gradient(100% 100% at 50% 0%, rgba(0, 0, 0, 0) 39.08%, rgba(0, 0, 0, 0.874) 62.7%);
+}
+.circle img {
+	opacity: 0.7;
+
+}
+.widget-group__btn {
+	width: 100%;
+	padding: 12px;
+}
+.swiper .widget-group__btn {
+	width: 232px;
+}
+.widget-group__btn button {
+	margin-bottom: 8px;
+}
+.widget-group__btn button:last-child {
+	margin-bottom: 0;
+}
+.wigget-nav .button {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+	height: 32px;
+	border: 1px solid rgba(176, 183, 192, 0.2);
+	border-radius: 0 !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	content: none !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	position: relative !important;
+	margin-top: 0 !important;
+	right: 0 !important;
+	left: 0 !important;
+}
+.bottom-widget {
+	left: 24px;
+	bottom: 24px;
+	width: 203px;
+	height: 257px;
+	position: fixed;
+	overflow: visible;
+	background: radial-gradient(72.92% 72.92% at 50% 50%, rgba(30, 30, 31, 0) 27.2%, rgba(30, 30, 31, 0.8) 100%), url(../img/pictures/bgwidget.png);
+}
+.widget-metal__logo {
+	top: -20px;
+	position: absolute;
+}
+.widget-bottom__content {
+	margin-top: auto;
+}
+.bottom-widget__text {
+	font-size: 28px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+.bottom-widget .button {
+	width: 124px;
+	margin: 11px 35px;
+}
+/* Стили для виджетов  */
+/* Стили для кнопок */
+.button{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 16px;
+	width: 100%;
+	min-height: 38px;
+	background: rgba(176, 183, 192, .2);
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	border-radius: 4px;
+	color: rgba(176, 183, 192, 0.8);
+	font-size: 16px;
+	transition: all 0.2s;
+}
+.button:hover{
+	background: rgba(176, 183, 192, 0.3);
+    backdrop-filter: blur(12px);
+}
+.button svg {
+	width: 15px;
+	height: 11px;
+}
+/* Стили для кнопок */
+/* Стили для центрального контента */
+.films-banner__container {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bghome.png), #000000;
+}
+.films-banner {
+	height: 100%;
+	position: relative;
+	width: fit-content;
+}
+.time-list {
+	width: 220px;
+}
+.time-list li {
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: rgba(176, 183, 192, 0.8);
+}
+.time-list span {
+	font-size: 32px;
+	font-weight: 600;
+	margin-right: 4px;
+}
+.arrow-bottom{
+	position: absolute;
+	margin-top: auto;
+	bottom: -141px;
+}
+/* Стили для центрального контента */
+/* Стили для каротек сериалов в центральном контенте */
+.serial-wrap {
+	width: 640px;
+	margin-right: 24px;
+}
+.serial {
+	height: 500px;
+	width: 950px;
+}
+.serial-item {
+	position: relative;
+	border-radius: 4px;
+	height: 100%;
+	border: 1px solid rgba(176, 183, 192, 0.2);
+	overflow: hidden;
+	margin-bottom: 24px;
+	cursor: pointer;
+}
+.horizontal {
+	width: 34%;
+}
+.vertical {
+	width: 64%;
+}
+.serial-img {
+	height: 100%;
+}
+.serial-img img,
+.serial-img video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.serial-info {
+	padding: 40px;
+	position: absolute;
+}
+.serial-info .text-xl {
+	max-width: 197px;
+}
+.serial-info .text-s {
+	font-weight: 500;
+	max-width: 176px;
+	font-family: 'Inter', sans-serif;
+	color: rgba(176, 183, 192, 0.8);
+}
+/* Стили для каротек сериалов в центральном контенте */
+/* Стили для футера */
+.footer {
+	border-top: 1px solid #D5DAE1;
+	padding: 29px 0;
+	margin-top: 100px;
+}
+.footer-inner {
+	width: 957px;
+}
+.footer-list__name {
+	margin-bottom: 8px;
+}
+.footer-wrap {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: 'Inter', sans-serif;
+	color: rgba(176, 183, 192, 0.8);
+	min-height: 50px;
+}
+.footer-wrap:nth-child(3) {
+	min-height: 128%;
+}
+.footer-wrap:last-child {
+	width: 100%;
+	margin-top: 47px;
+}
+.footer a {
+	font-size: 14px;
+	font-family: 'Inter', sans-serif;
+	color: #ffff;
+	transition: all 0.2s;
+}
+.user-agreement a:hover{
+	color: rgba(176, 183, 192, 0.8);
+}
+.footer-list li {
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+.footer-list li a {
+	font-size: 20px;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+}
+.develop-text{
+	max-width: 105px;
+}
+/* Стили для футера */
+.serial-game__descr {
+	width: 685px;
+	margin-top: 32px;
+	font-weight: 500;
+	line-height: 140%;
+	font-family: 'Inter', sans-serif;
+	color: rgba(176, 183, 192, 0.8);
+}
+.serial-game__descr p {
+	margin-bottom: 24px;
+}
+.widget-about__serial {
+	position: fixed;
+	bottom: 24px;
+	left: 24px;
+	width: 192px;
+	padding: 16px;
+	text-align: center;
+	background: #000;
+	z-index: 2;
+}
+.widget-about__serial .text-s {
+	margin-top: 8px;
+}
+.text-xl__serial-widget {
+	font-size: 28px;
+}
+.close-modal button {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+}
+.about {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bgserial.png), #000000;
+}
+.more {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/image8.png), #000000;
+}
+.serial-game__info {
+	text-align: center;
+}
+.serial-game__text {
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+.serial-game__descr {
+	width: 685px;
+	margin-top: 32px;
+	font-weight: 500;
+	line-height: 120%;
+	font-family: 'Inter', sans-serif;
+	color: rgba(176, 183, 192, 0.8);
+}
+.serial-game__text svg {
+	margin-left: 13px;
+}
+.game-modal .serial-game__text {
+	margin-top: 64px;
+}
+/* Стили для карточки игры */
+.game-card__items {
+	margin-left: 134px;
+}
+.game-card {
+	width: 306px;
+	height: 499px;
+	border: 1px solid rgba(176, 183, 192, 0.2);
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+}
+.game-card.active {
+	border: 1px solid red;
+}
+.game-card:hover {
+	z-index: 3;
+}
+.card-left {
+	z-index: 3;
+}
+.card-center {
+	margin-left: -224px;
+	margin-top: -108px;
+	z-index: 2;
+}
+.card-right {
+	z-index: 1;
+	margin-top: -56px;
+	margin-left: -116px;
+}
+.game-card__img img {
+	width: 100%;
+	height: 100%;
+	filter: blur(62px);
+	transition: all 0.2s;
+	object-fit: cover;
+}
+.game-card:hover img {
+	filter: blur(0px);
+	;
+}
+.game-card:hover .game-card__info {
+	opacity: 1;
+	pointer-events: all;
+}
+.game-card__info {
+	position: absolute;
+	z-index: 1;
+	top: 13px;
+	left: 13px;
+	right: 13px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.2s;
+}
+.game-card:hover .game-card__button {
+	opacity: 1;
+	pointer-events: all;
+}
+.game-card__info .serial-game__descr {
+	width: 100%;
+}
+.game-card__name {
+	font-family: 'Oswald';
+	font-weight: 600;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+.game-card__button {
+	width: 96px;
+	height: 96px;
+	background: rgba(255, 255, 255, 0.5);
+	mix-blend-mode: normal;
+	backdrop-filter: blur(62px);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	cursor: pointer;
+	position: absolute;
+	bottom: 112px;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+/* Стили для карточки игры */

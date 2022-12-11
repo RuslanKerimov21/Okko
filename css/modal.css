@@ -1,0 +1,223 @@
+/* Стили для модалного окна */
+.button:hover{
+	background: rgba(176, 183, 192, 0.3);
+    backdrop-filter: blur(12px);
+}
+.game-button__group {
+	width: 600px;
+}
+.status-game{
+	color: rgba(176, 183, 192, 0.8);
+	font-family: 'Inter', sans-serif;
+	width: 330px;
+	text-align: center;
+}
+.game-button__group .button {
+	width: 49%;
+	min-height: 38px;
+	padding: 26px 16px;
+}
+.share-results{
+	margin-top: 32px;
+}
+.share-descr{
+	width: 100%;
+	border: 1px solid rgba(176, 183, 192, 0.2);
+    border-radius: 4px;
+	padding: 12px 18px;
+	margin-top: 44px;
+}
+.social{
+	width: fit-content;
+}
+.link{
+	width: 64px;
+	height: 64px;
+	border: 2px solid rgba(176, 183, 192, 0.2);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 18px;
+	transition: all 0.2s;
+}
+.link:hover{
+	background: rgba(176, 183, 192, 0.2);
+}
+.private-time{
+	margin: 8px 0 32px;
+	font-size: 80px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+.game-button__result{
+	width: 100%;
+	margin-top: 64px;
+}
+.game-button__result .button{
+	min-height: 51px;
+}
+.game-button__result .button:first-child{
+	width: 30%;
+}
+.game-button__result .button:last-child{
+	width: 68%;
+}
+.game-modal.succes{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bghsucces.png), #000000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.game-modal.failure{
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bgerror.png), #000000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.content-6{
+	width: 324px;
+}
+.clipboards{
+	position: relative;
+	margin-top: 16px;
+	width: 100%;
+}
+.input{
+	width: 100%;
+	min-height: 38px;
+    background: rgba(176, 183, 192, .2);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 4px;
+    color: rgba(176, 183, 192, 0.8);
+    font-size: 16px;
+	padding: 24px;
+	font-family: 'Inter', sans-serif;
+}
+.clipboards button{
+	width: 24px;
+	height: 24px;
+	right: 24px;
+	position: absolute;
+}
+.content-6м .widget{
+	margin-top: 48px;
+	padding: 16px;
+}
+.content-3.active{
+	display: block;
+}
+.content-6 .widget{
+	margin-top: 48px;
+    padding: 16px;
+}
+.close-modal {
+	z-index: 3;
+}
+.modals {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: #000;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s;
+}
+.modals.active {
+	opacity: 1;
+	pointer-events: all;
+}
+.modal-content__banner {
+	position: relative;
+}
+.modal-content__title {
+	position: absolute;
+	top: -41px;
+	left: 14px;
+}
+.modal-content__title img {
+	width: 100%;
+}
+.modal-content{
+	z-index: 2;
+}
+.video{
+	width: 716px;
+	height: 307px;
+	overflow: hidden;
+	border-radius: 6px;
+	border: 1px solid rgba(176, 183, 192, 0.2);
+}
+.video iframe, .video video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.videoplayer-triger{
+	width: 81px;
+	height: 81px;
+	border-radius: 100%;
+	background: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(62px);
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+	opacity: 1;
+	transition: all 0.5s;
+	pointer-events: all;
+}
+.videoplayer-triger img{
+	width: 20px;
+	height: 20px;
+}
+.videoplayer-triger.hide{
+	opacity: 0;
+	pointer-events: none;
+}
+.videoplayer-triger.show{
+	display: flex;
+}
+.game-modal .serial-game__descr {
+	width: 460px;
+}
+.game-modal {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bghome.png), #000000;
+}
+.game-modal .modal-content {
+	display: none;
+}
+.modal-content.active {
+	display: flex;
+}
+.content-2.active{
+	display: block;
+}
+.help-list {
+	margin-top: 38px;
+}
+.help-list li {
+	font-family: 'Inter', sans-serif;
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+.help-list li span {
+	background: rgba(176, 183, 192, .2);
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	border-radius: 100%;
+	width: 42px;
+	height: 42px;
+	margin-right: 12px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.help-list li p {
+	width: 299px;
+	line-height: 140%;
+}
+/* Стили для модалного окна */

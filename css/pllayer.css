@@ -1,0 +1,245 @@
+@import "/css/theme.css" all;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oswald:wght@600&display=swap');
+/* Стандартные стили для сайта начало */
+a {
+    display: block;
+    text-decoration: none;
+    color: #3C3C3C;
+    position: relative;
+    font-size: 16px;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #000000;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #D5DAE1;
+}
+/* Стандартные стили для сайта конец */
+/* Стили для плеера */
+.widget-player{
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 192px !important;
+    padding: 16px;
+    text-align: center;
+    background: #000;
+    z-index: 2;
+}
+.widget {
+    background: #000;
+    border: 1px solid rgb(176 183 192 / 24%);
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.logo {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 3;
+}
+.player-banner {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.3%, #000000 96.79%), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 22.78%, rgba(0, 0, 0, 0.8) 100%), url(../img/pictures/bghome.png), #000000;
+}
+.player-container {
+    width: 296px;
+    max-width: 100%;
+}
+.player_image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 296px;
+    margin-bottom: 36px;
+    position: relative;
+}
+/* .player_image::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 30px;
+    background: url(../img/pictures/bggradi.png) no-repeat;
+} */
+.player_image img {
+    width: 100%;
+}
+.player-msg{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+.player-msg svg{
+    display: none;
+}
+.player-msg.active svg{
+    display: block;
+}
+.player-msg span{
+    opacity: 0;
+}
+.player-msg.active span{
+    opacity: 1;
+}
+.player-msg.active{
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.9);
+    color: rgba(176, 183, 192, 0.8);
+}
+.player-volume {
+    background: rgba(176, 183, 192, 0.3);
+}
+.player_title {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+.player_times {
+    font-size: 14px;
+    margin-top: 12px;
+    letter-spacing: -0.04em;
+    font-family: 'Inter', sans-serif;
+    color: rgba(176, 183, 192, 0.8);
+}
+#play{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+#play img{
+    width: 9px;
+    height: 9px;
+}
+.player_controls{
+    max-width: 178px;
+    margin: 0 auto;
+}
+.player_controls p{
+    cursor: pointer;
+}
+.player-control{
+    margin-bottom: 24px;
+}
+input[type=range] {
+	width: 100%;
+}
+input[type=range].custom {
+	width: 100%;
+	padding: 0;
+	margin: 1em 0;
+	height: 3px;
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background: linear-gradient(#ffffff, #ffffff) no-repeat,  rgba(176, 183, 192, 0.3);;
+	background-size: 0 100%;
+}
+input[type=range].custom-2 {
+	height: 2px;
+    background-size: 100% 100%;
+}
+input[type=range].custom:focus {
+	outline: none;
+	box-shadow: none;
+}
+input[type=range].custom::-webkit-slider-thumb {
+	background: #fff;
+	width: 6px;
+    height: 14px;
+    border-radius: 2px;
+	border: none;
+	position: relative;
+	-webkit-appearance: none;
+}
+input[type=range].custom-2::-webkit-slider-thumb{
+    width: 4px;
+    height: 10px;
+}
+input[type=range].custom:focus::-webkit-slider-thumb,
+input[type=range].custom:hover::-webkit-slider-thumb {
+	background: #b0b8b3;
+}
+input[type=range].custom::-moz-range-track {
+	background: none;
+}
+input[type=range].custom::-moz-range-thumb {
+	background: #aaa;
+	border: none;
+	border-radius: 0;
+	height: 1.2em;
+	width: 1em;
+	margin-top: -0.2em;
+}
+input[type=range].custom:hover::-moz-range-thumb,
+input[type=range].custom:focus::-moz-range-thumb {
+	background: #727272;
+}
+input[type=range].custom::-ms-thumb {
+	background: #aaa;
+	height: 1.2em;
+	width: 1em;
+	margin-top: -0.2em;
+}
+input[type=range].custom:hover::-ms-thumb,
+input[type=range].custom:focus::-ms-thumb {
+	background-color: #727272;
+}
+.player_volume{
+    width: fit-content;
+    margin-left: auto;
+}
+.volume{
+    width: 33px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+.plyr__control{
+    height: 15px;
+}
+.plyr__control span{
+    display: none;
+}
+.player_volume:hover .volume{
+    opacity: 1;
+    pointer-events: all;
+}
+/* Стили для плеера */
+/* медиа cтили для audioplayer */
+@media(max-width: 1070px){
+    .fullscreen-player{
+        flex-direction: column;
+    }
+    .fullscreen-player .logo{
+        position: unset;
+        margin-bottom: 40px;
+    }
+    .widget-player{
+        position: unset;
+        margin-top: 80px;
+        width: 100% !important;
+    }
+    .fullscreen-player{
+        margin: 64px 0;
+    }
+    .player-container{
+        width: 100%;
+    }
+}
+/* медиа cтили для audioplayer */
